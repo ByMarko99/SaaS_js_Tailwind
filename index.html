@@ -1,13 +1,67 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Form</title>
+    <link href="output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss-animated@0.2.2/dist/index.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1 class="text-3xl bg-metal font-bold underline bg-green-200">
-    Hello world!
-  </h1>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    <div class="bg-white p-8 rounded shadow-md w-96 animated bounceInDown">
+        <h2 class="text-2xl font-bold mb-4 animated fadeIn">Form Title</h2>
+
+        <form>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input
+                    class="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring focus:border-blue-300  focus:bg-gradient-to-r focus:from-red-500 focus:via-yellow-500 focus:to-blue-500 focus:bg-opacity-30 animated fadeIn bounce"
+                    type="text" id="username" name="username" required>
+
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                    Pasahitza
+                </label>
+                <input
+                    class="w-full px-3 py-2 mb-4 border rounded-md focus:outline-none focus:ring focus:border-blue-300  focus:bg-gradient-to-r focus:from-red-500 focus:via-yellow-500 focus:to-blue-500 focus:bg-opacity-30 animated fadeIn bounce"
+                    type="text" id="password" name="password" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Interests
+                </label>
+                <div class="">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" name="interests" value="coding">
+                        <span class="ml-2">Coding</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" name="interests" value="design">
+                        <span class="ml-2">Diseinua</span>
+                    </label>
+
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox" name="interests" value="coding">
+                        <span class="ml-2">Jolasak</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <button
+                    class="bg-blue-500 text-white px-4 py-2 rounded-md focus:outline-none hover:bg-blue-600 animated fadeIn bounce"
+                    type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
 </body>
+
 </html>
